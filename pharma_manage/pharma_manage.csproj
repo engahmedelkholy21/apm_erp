@@ -1,0 +1,2740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74A03AEA-218B-48B8-9B75-3D97FB592DAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pharma_manage</RootNamespace>
+    <AssemblyName>APM ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\eng\Desktop\55555\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>920D9D8DC8ACA00D398DE0B0A632658B4E418709</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\apm_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord.Imaging">
+      <HintPath>C:\Users\eng\Downloads\accord.imaging.3.8.2-alpha\lib\net40\Accord.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Vision">
+      <HintPath>C:\Users\eng\Downloads\accord.vision.3.8.2-alpha\lib\net40\Accord.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\..\alriyd_gym\alriyd_gym\bin\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\alriyd_gym\alriyd_gym\bin\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\alriyd_gym\alriyd_gym\bin\Release\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\alriyd_gym\alriyd_gym\bin\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\alriyd_gym\alriyd_gym\bin\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="APM ERP, Version=1.19.2022.10, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AxInterop.CrystalActiveXReportViewerLib13">
+      <HintPath>..\..\barcode_print_test\barcode_print\bin\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Google.Apis, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.10.0.25333, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.10.0\lib\net40\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.10.0.25331, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.10.0\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v2, Version=1.57.0.2859, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v2.1.57.0.2859\lib\net40\Google.Apis.Drive.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.10.0.25332, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.10.0\lib\net40\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommServer">
+      <HintPath>..\..\Alwaleed_Company\Alwaleed_Company\bin\Release\GSMCommServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommShared">
+      <HintPath>..\..\Alwaleed_Company\Alwaleed_Company\bin\Release\GSMCommShared.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommunication">
+      <HintPath>..\..\Alwaleed_Company\Alwaleed_Company\bin\Release\GSMCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CrystalActiveXReportViewerLib13">
+      <HintPath>..\..\barcode_print_test\barcode_print\bin\Debug\Interop.CrystalActiveXReportViewerLib13.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSet UI">
+      <HintPath>C:\Users\Midoa\Downloads\metroset_ui.1.0.4\lib\net40\MetroSet UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PDUConverter">
+      <HintPath>..\..\Alwaleed_Company\Alwaleed_Company\bin\Release\PDUConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="pharma_manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Email">
+      <HintPath>..\..\pharma_manage_ sheikh 3abdallah last\pharma_manage\bin\Release\Spire.Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License">
+      <HintPath>..\..\pharma_manage_ sheikh 3abdallah last\pharma_manage\bin\Release\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="X Manage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\pharma_manage_Mohamed ashraf mat3am\pharma_manage\bin\Release\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\..\pharma_manage_Mohamed ashraf mat3am\pharma_manage\bin\Release\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="a4_fatora.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a4_fatora.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a4_fatora_nesba.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a4_fatora_nesba.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a5_crystal_madeen_details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a5_crystal_madeen_details.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a5_fatora_crystal_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a5_fatora_crystal_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a5_ta7weel_crystal_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>a5_ta7weel_crystal_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="add_assets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_assets.designer.cs">
+      <DependentUpon>add_assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_customer.Designer.cs">
+      <DependentUpon>add_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_halek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_halek.Designer.cs">
+      <DependentUpon>add_halek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_promotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_promotion.Designer.cs">
+      <DependentUpon>add_promotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_resp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_resp.Designer.cs">
+      <DependentUpon>add_resp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_serial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_serial.designer.cs">
+      <DependentUpon>add_serial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aksat_show_for_all_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>aksat_show_for_all_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="aksat_summary_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aksat_summary_form.Designer.cs">
+      <DependentUpon>aksat_summary_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amr_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>amr_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amr_masrof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amr_masrof.designer.cs">
+      <DependentUpon>amr_masrof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amr_masrofat_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>amr_masrofat_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amr_materials_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>amr_materials_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amr_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amr_reports.designer.cs">
+      <DependentUpon>amr_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amr_sho3l.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amr_sho3l.designer.cs">
+      <DependentUpon>amr_sho3l.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amr_sho3l_list_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amr_sho3l_list_2.designer.cs">
+      <DependentUpon>amr_sho3l_list_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amr_sho3l_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>amr_sho3l_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="apm_shortcuts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="apm_shortcuts.Designer.cs">
+      <DependentUpon>apm_shortcuts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="apm_txt_box.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="apm_txt_box.Designer.cs">
+      <DependentUpon>apm_txt_box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arba7_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arba7_category.Designer.cs">
+      <DependentUpon>arba7_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arba7_cat_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arba7_cat_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="arba7_egmaly_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>arba7_egmaly_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="awzan_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="awzan_form.Designer.cs">
+      <DependentUpon>awzan_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a5_crystal_da2n_details.cs">
+      <DependentUpon>a5_crystal_da2n_details.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="a5_ezn_fatora_crystal_report.cs">
+      <DependentUpon>a5_ezn_fatora_crystal_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="a4_ezn_fatora.cs">
+      <DependentUpon>a4_ezn_fatora.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="buy_nesba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buy_nesba.designer.cs">
+      <DependentUpon>buy_nesba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capture_picture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capture_picture.designer.cs">
+      <DependentUpon>Capture_picture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cards_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cards_form.Designer.cs">
+      <DependentUpon>cards_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cards_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cards_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="change_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change_password.designer.cs">
+      <DependentUpon>change_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="codes_insertion_class.cs" />
+    <Compile Include="ControlStyler.cs" />
+    <Compile Include="Copy %282%29 of CrystalReport1.cs">
+      <DependentUpon>Copy %282%29 of CrystalReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Copy %282%29 of CrystalReport2.cs">
+      <DependentUpon>Copy %282%29 of CrystalReport2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="barcode_form_single.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="barcode_form_single.Designer.cs">
+      <DependentUpon>barcode_form_single.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_loan_request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_loan_request.designer.cs">
+      <DependentUpon>create_loan_request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport_kest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_kest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customers_points.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_points.Designer.cs">
+      <DependentUpon>customers_points.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delayed_aksat_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delayed_aksat_form.Designer.cs">
+      <DependentUpon>delayed_aksat_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete_kest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_kest.designer.cs">
+      <DependentUpon>delete_kest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_aksat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_aksat.Designer.cs">
+      <DependentUpon>edit_aksat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="face_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="face_login.Designer.cs">
+      <DependentUpon>face_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loans_print.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loans_print.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="loans_under_revision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loans_under_revision.designer.cs">
+      <DependentUpon>loans_under_revision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loan_aksat_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loan_aksat_show.designer.cs">
+      <DependentUpon>loan_aksat_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loan_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loan_delete.designer.cs">
+      <DependentUpon>loan_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pay_kest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pay_kest.designer.cs">
+      <DependentUpon>pay_kest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="points_def_formcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="points_def_formcs.Designer.cs">
+      <DependentUpon>points_def_formcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_print2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products_print2.Designer.cs">
+      <DependentUpon>products_print2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="promotions_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promotions_list.Designer.cs">
+      <DependentUpon>promotions_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="sadad_mo3agal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sadad_mo3agal.Designer.cs">
+      <DependentUpon>sadad_mo3agal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe_taswia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe_taswia.Designer.cs">
+      <DependentUpon>safe_taswia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales_best_selling_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_best_selling_category.Designer.cs">
+      <DependentUpon>sales_best_selling_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport_zebra38-55.cs">
+      <DependentUpon>CrystalReport_zebra38-55.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport1_pos.cs">
+      <DependentUpon>CrystalReport1_pos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport1_apm.cs">
+      <DependentUpon>CrystalReport1_apm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport_zebra10-75.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_zebra10-75.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pay_mas2ool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pay_mas2ool.Designer.cs">
+      <DependentUpon>pay_mas2ool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="final_report_tst.cs">
+      <DependentUpon>final_report_tst.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="most7kat_mas2ooleen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="most7kat_mas2ooleen.Designer.cs">
+      <DependentUpon>most7kat_mas2ooleen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiveSms.cs" />
+    <Compile Include="resp_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resp_list.Designer.cs">
+      <DependentUpon>resp_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales_best_selling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_best_selling.Designer.cs">
+      <DependentUpon>sales_best_selling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sarf_nesba_edara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sarf_nesba_edara.Designer.cs">
+      <DependentUpon>sarf_nesba_edara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="send_sms_class.cs" />
+    <Compile Include="settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_form.Designer.cs">
+      <DependentUpon>settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_user.Designer.cs">
+      <DependentUpon>add_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="a4_fatora_tas3eer.cs">
+      <DependentUpon>a4_fatora_tas3eer.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="add_user_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_user_3.Designer.cs">
+      <DependentUpon>add_user_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="a4_ta7weel_crystal_report.cs">
+      <DependentUpon>a4_ta7weel_crystal_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="kashf_7esab_da2n_report.cs">
+      <DependentUpon>kashf_7esab_da2n_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="employees_report_print.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employees_report_print.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="final_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>final_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="final_report_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>final_report_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mas7obat_list_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mas7obat_list_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ras_mal_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ras_mal_report.Designer.cs">
+      <DependentUpon>ras_mal_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reciept_ta7weel_crystal_report.cs">
+      <DependentUpon>reciept_ta7weel_crystal_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="gard_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gard_form.Designer.cs">
+      <DependentUpon>gard_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales\sell_for_tas3eer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales\sell_for_tas3eer.Designer.cs">
+      <DependentUpon>sell_for_tas3eer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales\sell_nesba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales\sell_nesba.designer.cs">
+      <DependentUpon>sell_nesba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_files.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_files.designer.cs">
+      <DependentUpon>show_files.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_tas3eer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_tas3eer.Designer.cs">
+      <DependentUpon>show_tas3eer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_users_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_users_2.Designer.cs">
+      <DependentUpon>show_users_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen_list_report_reciept.cs">
+      <DependentUpon>madeen_list_report_reciept.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="madeen_list_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>madeen_list_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="madeen_print_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen_print_2.Designer.cs">
+      <DependentUpon>madeen_print_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mas7obat_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mas7obat_fatora.designer.cs">
+      <DependentUpon>mas7obat_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mas7obat_fatora_report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mas7obat_fatora_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mas7obat_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mas7obat_list.designer.cs">
+      <DependentUpon>mas7obat_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mo3adalat_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mo3adalat_form.designer.cs">
+      <DependentUpon>mo3adalat_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mo3adalat_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mo3adalat_show.Designer.cs">
+      <DependentUpon>mo3adalat_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales_detailed_report_grouped.cs">
+      <DependentUpon>sales_detailed_report_grouped.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport2_small.cs">
+      <DependentUpon>CrystalReport2_small.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="daily_gard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>daily_gard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="delete_some_tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_some_tables.Designer.cs">
+      <DependentUpon>delete_some_tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="halek_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="halek_show.designer.cs">
+      <DependentUpon>halek_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="half_ezn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>half_ezn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="half_fatora.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>half_fatora.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outcome_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>outcome_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="outcome_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outcome_report_form.Designer.cs">
+      <DependentUpon>outcome_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_crystal_taklefa_bee3.cs">
+      <DependentUpon>products_crystal_taklefa_bee3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="products_crystal_for_all_without_zero.cs">
+      <DependentUpon>products_crystal_for_all_without_zero.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="print_all_products_crystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_all_products_crystal.Designer.cs">
+      <DependentUpon>print_all_products_crystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_crystal_for_all_including_zero.cs">
+      <DependentUpon>products_crystal_for_all_including_zero.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="deleted_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleted_form.designer.cs">
+      <DependentUpon>deleted_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_category_price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_category_price.Designer.cs">
+      <DependentUpon>edit_category_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mortaga3_purchases_crystal.cs">
+      <DependentUpon>mortaga3_purchases_crystal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mortaga3_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mortaga3_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="most7kat_da2neen_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="most7kat_da2neen_show.designer.cs">
+      <DependentUpon>most7kat_da2neen_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="partners_share.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="partners_share.designer.cs">
+      <DependentUpon>partners_share.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_by_category_crystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_by_category_crystal.Designer.cs">
+      <DependentUpon>print_by_category_crystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pro_suggest_for_sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pro_suggest_for_sell.designer.cs">
+      <DependentUpon>pro_suggest_for_sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ra2s_elmal_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ra2s_elmal_status.designer.cs">
+      <DependentUpon>ra2s_elmal_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sadad_print_reset.cs">
+      <DependentUpon>sadad_print_reset.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="kashf_7esab_report_a5.cs">
+      <DependentUpon>kashf_7esab_report_a5.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="sales_report_crystal_grouped.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales_report_crystal_grouped.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="select_printer_kashf_7esab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="select_printer_kashf_7esab.designer.cs">
+      <DependentUpon>select_printer_kashf_7esab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kashf_7esab_report_reset.cs">
+      <DependentUpon>kashf_7esab_report_reset.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="crystal_nwa2es.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crystal_nwa2es.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="employees\edit_attending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\edit_attending.Designer.cs">
+      <DependentUpon>edit_attending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\ensraf_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\ensraf_form.Designer.cs">
+      <DependentUpon>ensraf_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="estlam_syana_report.cs">
+      <DependentUpon>estlam_syana_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="da2n_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n_print.Designer.cs">
+      <DependentUpon>da2n_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\add_solaf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\add_solaf.Designer.cs">
+      <DependentUpon>add_solaf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\add_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\add_employee.designer.cs">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_mwared.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_mwared.Designer.cs">
+      <DependentUpon>add_mwared.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_user_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_user_2.Designer.cs">
+      <DependentUpon>add_user_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arba7_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arba7_report.Designer.cs">
+      <DependentUpon>arba7_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\attending_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\attending_emp.designer.cs">
+      <DependentUpon>attending_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\attending_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\attending_show.designer.cs">
+      <DependentUpon>attending_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="barcode_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="barcode_form.Designer.cs">
+      <DependentUpon>barcode_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chart_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart_form.designer.cs">
+      <DependentUpon>chart_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="close_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="close_form.Designer.cs">
+      <DependentUpon>close_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contact_US.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contact_US.Designer.cs">
+      <DependentUpon>contact_US.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="delete_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_all.designer.cs">
+      <DependentUpon>delete_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employees\employees_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees\employees_show.designer.cs">
+      <DependentUpon>employees_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ezn sarf\ezn_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ezn sarf\ezn_create.Designer.cs">
+      <DependentUpon>ezn_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ezn sarf\ezn_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ezn sarf\ezn_show.Designer.cs">
+      <DependentUpon>ezn_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ezn_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ezn_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kashf_7esab_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kashf_7esab_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="last_crystal.cs">
+      <DependentUpon>last_crystal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Crystal_report_last.cs">
+      <DependentUpon>Crystal_report_last.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Copy of CrystalReport1.cs">
+      <DependentUpon>Copy of CrystalReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Copy of CrystalReport2.cs">
+      <DependentUpon>Copy of CrystalReport2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport1_old.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1_old.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crystal_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crystal_report_form.Designer.cs">
+      <DependentUpon>crystal_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_show.Designer.cs">
+      <DependentUpon>customers_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n\add_da2n.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n\add_da2n.Designer.cs">
+      <DependentUpon>add_da2n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_madeen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_madeen.Designer.cs">
+      <DependentUpon>add_madeen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buy.Designer.cs">
+      <DependentUpon>buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n\da2n.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n\da2n.Designer.cs">
+      <DependentUpon>da2n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n\da2n_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n\da2n_details.Designer.cs">
+      <DependentUpon>da2n_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n_details_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n_details_print.Designer.cs">
+      <DependentUpon>da2n_details_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n_edit.Designer.cs">
+      <DependentUpon>da2n_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="delete_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_user.Designer.cs">
+      <DependentUpon>delete_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_customer.Designer.cs">
+      <DependentUpon>edit_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit_madeen_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_madeen_details.Designer.cs">
+      <DependentUpon>edit_madeen_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expiration_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expiration_form.Designer.cs">
+      <DependentUpon>expiration_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gor3at.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gor3at.designer.cs">
+      <DependentUpon>gor3at.cs</DependentUpon>
+    </Compile>
+    <Compile Include="income_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="income_print.Designer.cs">
+      <DependentUpon>income_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen\madeen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen\madeen.Designer.cs">
+      <DependentUpon>madeen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen\madeen_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen\madeen_details.Designer.cs">
+      <DependentUpon>madeen_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="da2n\pay_da2n.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="da2n\pay_da2n.Designer.cs">
+      <DependentUpon>pay_da2n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen\pay_madeen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen\pay_madeen.Designer.cs">
+      <DependentUpon>pay_madeen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen_details_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen_details_print.Designer.cs">
+      <DependentUpon>madeen_details_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="madeen_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="madeen_print.Designer.cs">
+      <DependentUpon>madeen_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mas7obat_syana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mas7obat_syana.Designer.cs">
+      <DependentUpon>mas7obat_syana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mortaga3_purchases_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mortaga3_purchases_reports.Designer.cs">
+      <DependentUpon>mortaga3_purchases_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mortaga3_sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mortaga3_sales.Designer.cs">
+      <DependentUpon>mortaga3_sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mosta7kat_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mosta7kat_show.designer.cs">
+      <DependentUpon>mosta7kat_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mwardeen_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mwardeen_show.Designer.cs">
+      <DependentUpon>mwardeen_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nwa2es_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nwa2es_print.Designer.cs">
+      <DependentUpon>nwa2es_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outcome_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outcome_print.Designer.cs">
+      <DependentUpon>outcome_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacy_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacy_data.Designer.cs">
+      <DependentUpon>pharmacy_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_fatora_bee3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_fatora_bee3.Designer.cs">
+      <DependentUpon>print_fatora_bee3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_last_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_last_fatora.Designer.cs">
+      <DependentUpon>print_last_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_crystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>products_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="products_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products_print.Designer.cs">
+      <DependentUpon>products_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchases.Designer.cs">
+      <DependentUpon>purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchases_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchases_fatora.Designer.cs">
+      <DependentUpon>purchases_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchases_mortaga3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchases_mortaga3.Designer.cs">
+      <DependentUpon>purchases_mortaga3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchases_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchases_print.Designer.cs">
+      <DependentUpon>purchases_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe\add_to_income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\add_to_income.Designer.cs">
+      <DependentUpon>add_to_income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="arba7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="arba7.Designer.cs">
+      <DependentUpon>arba7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe\income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\income.Designer.cs">
+      <DependentUpon>income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe\outcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\outcome.Designer.cs">
+      <DependentUpon>outcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_barcode.Designer.cs">
+      <DependentUpon>print_barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\add_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\add_category.Designer.cs">
+      <DependentUpon>add_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\add_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\add_product.Designer.cs">
+      <DependentUpon>add_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\category_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\category_list.Designer.cs">
+      <DependentUpon>category_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\edit_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\edit_category.Designer.cs">
+      <DependentUpon>edit_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\edit_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\edit_product.Designer.cs">
+      <DependentUpon>edit_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\nwa2s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\nwa2s.Designer.cs">
+      <DependentUpon>nwa2s.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products\product_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products\product_list.Designer.cs">
+      <DependentUpon>product_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_moves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products_moves.Designer.cs">
+      <DependentUpon>products_moves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="safe\safe_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\safe_status.Designer.cs">
+      <DependentUpon>safe_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe\sarf_from_outcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\sarf_from_outcome.Designer.cs">
+      <DependentUpon>sarf_from_outcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="safe\sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="safe\sales.Designer.cs">
+      <DependentUpon>sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales\sales_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales\sales_fatora.Designer.cs">
+      <DependentUpon>sales_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales_mortaga3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_mortaga3.Designer.cs">
+      <DependentUpon>sales_mortaga3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales\sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales\sell.Designer.cs">
+      <DependentUpon>sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales_print.Designer.cs">
+      <DependentUpon>sales_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saydaly_nesba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saydaly_nesba.Designer.cs">
+      <DependentUpon>saydaly_nesba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="se3r_offer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>se3r_offer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="search_in_far3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_in_far3.Designer.cs">
+      <DependentUpon>search_in_far3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="select_printer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="select_printer.designer.cs">
+      <DependentUpon>select_printer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales\sell_with_icons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales\sell_with_icons.designer.cs">
+      <DependentUpon>sell_with_icons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serials_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serials_form.designer.cs">
+      <DependentUpon>serials_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_picture_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_picture_form.designer.cs">
+      <DependentUpon>show_picture_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_users.Designer.cs">
+      <DependentUpon>show_users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stocks.Designer.cs">
+      <DependentUpon>stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubstringAutoCompleteTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubstringAutoCompleteTextBox.Designer.cs">
+      <DependentUpon>SubstringAutoCompleteTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syana\syana_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syana\syana_fatora.Designer.cs">
+      <DependentUpon>syana_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syana\syana_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syana\syana_reports.Designer.cs">
+      <DependentUpon>syana_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syana\syana_tanfeez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syana\syana_tanfeez.Designer.cs">
+      <DependentUpon>syana_tanfeez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ta2feel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ta2feel.designer.cs">
+      <DependentUpon>ta2feel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ta2feel_arba7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ta2feel_arba7.Designer.cs">
+      <DependentUpon>ta2feel_arba7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ta2feel_crystal1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ta2feel_crystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ta7weel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ta7weel.Designer.cs">
+      <DependentUpon>ta7weel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ta7weelat_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ta7weelat_show.designer.cs">
+      <DependentUpon>ta7weelat_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syana\tasleem_syana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syana\tasleem_syana.Designer.cs">
+      <DependentUpon>tasleem_syana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tawreedat_fatora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tawreedat_fatora.designer.cs">
+      <DependentUpon>tawreedat_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tawreedat_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tawreedat_list.designer.cs">
+      <DependentUpon>tawreedat_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tawreedat_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tawreedat_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TranslationManager.cs" />
+    <Compile Include="wardia_CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wardia_CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="a4_fatora.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a4_fatora.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a4_fatora_nesba.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a4_fatora_nesba.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a5_crystal_madeen_details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a5_crystal_madeen_details.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a5_fatora_crystal_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a5_fatora_crystal_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a5_ta7weel_crystal_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a5_ta7weel_crystal_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_assets.resx">
+      <DependentUpon>add_assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_customer.resx">
+      <DependentUpon>add_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a5_crystal_da2n_details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a5_crystal_da2n_details.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a5_ezn_fatora_crystal_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a5_ezn_fatora_crystal_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a4_ezn_fatora.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a4_ezn_fatora.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_halek.resx">
+      <DependentUpon>add_halek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_promotion.resx">
+      <DependentUpon>add_promotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_resp.resx">
+      <DependentUpon>add_resp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_serial.resx">
+      <DependentUpon>add_serial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aksat_show_for_all_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>aksat_show_for_all_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aksat_summary_form.resx">
+      <DependentUpon>aksat_summary_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>amr_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_masrof.resx">
+      <DependentUpon>amr_masrof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_masrofat_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>amr_masrofat_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_materials_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>amr_materials_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_reports.resx">
+      <DependentUpon>amr_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_sho3l.resx">
+      <DependentUpon>amr_sho3l.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_sho3l_list_2.resx">
+      <DependentUpon>amr_sho3l_list_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amr_sho3l_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>amr_sho3l_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apm_shortcuts.resx">
+      <DependentUpon>apm_shortcuts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="apm_txt_box.resx">
+      <DependentUpon>apm_txt_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arba7_category.resx">
+      <DependentUpon>arba7_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arba7_cat_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>arba7_cat_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arba7_egmaly_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>arba7_egmaly_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="awzan_form.resx">
+      <DependentUpon>awzan_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buy_nesba.resx">
+      <DependentUpon>buy_nesba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capture_picture.resx">
+      <DependentUpon>Capture_picture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cards_form.resx">
+      <DependentUpon>cards_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cards_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cards_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_password.resx">
+      <DependentUpon>change_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy %282%29 of CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy %282%29 of CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy %282%29 of CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy %282%29 of CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="barcode_form_single.resx">
+      <DependentUpon>barcode_form_single.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_loan_request.resx">
+      <DependentUpon>create_loan_request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_kest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_kest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_points.resx">
+      <DependentUpon>customers_points.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delayed_aksat_form.resx">
+      <DependentUpon>delayed_aksat_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_kest.resx">
+      <DependentUpon>delete_kest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_aksat.resx">
+      <DependentUpon>edit_aksat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="face_login.resx">
+      <DependentUpon>face_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loans_print.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>loans_print.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loans_under_revision.resx">
+      <DependentUpon>loans_under_revision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loan_aksat_show.resx">
+      <DependentUpon>loan_aksat_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loan_delete.resx">
+      <DependentUpon>loan_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay_kest.resx">
+      <DependentUpon>pay_kest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="points_def_formcs.resx">
+      <DependentUpon>points_def_formcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_print2.resx">
+      <DependentUpon>products_print2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promotions_list.resx">
+      <DependentUpon>promotions_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.ar.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sadad_mo3agal.resx">
+      <DependentUpon>sadad_mo3agal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="safe_taswia.resx">
+      <DependentUpon>safe_taswia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_best_selling_category.resx">
+      <DependentUpon>sales_best_selling_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_zebra38-55.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_zebra38-55.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1_pos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1_pos.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1_apm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1_apm.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_zebra10-75.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_zebra10-75.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay_mas2ool.resx">
+      <DependentUpon>pay_mas2ool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="final_report_tst.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>final_report_tst.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="most7kat_mas2ooleen.resx">
+      <DependentUpon>most7kat_mas2ooleen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resp_list.resx">
+      <DependentUpon>resp_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_best_selling.resx">
+      <DependentUpon>sales_best_selling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sarf_nesba_edara.resx">
+      <DependentUpon>sarf_nesba_edara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_form.resx">
+      <DependentUpon>settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_user.resx">
+      <DependentUpon>add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a4_fatora_tas3eer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a4_fatora_tas3eer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_user_3.resx">
+      <DependentUpon>add_user_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="a4_ta7weel_crystal_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>a4_ta7weel_crystal_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kashf_7esab_da2n_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>kashf_7esab_da2n_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees_report_print.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>employees_report_print.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="final_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>final_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="final_report_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>final_report_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mas7obat_list_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mas7obat_list_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ras_mal_report.resx">
+      <DependentUpon>ras_mal_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ras_mal_report_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reciept_ta7weel_crystal_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reciept_ta7weel_crystal_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gard_form.resx">
+      <DependentUpon>gard_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales\sell_for_tas3eer.resx">
+      <DependentUpon>sell_for_tas3eer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales\sell_nesba.resx">
+      <DependentUpon>sell_nesba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_files.resx">
+      <DependentUpon>show_files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_tas3eer.resx">
+      <DependentUpon>show_tas3eer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_users_2.resx">
+      <DependentUpon>show_users_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen_list_report_reciept.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>madeen_list_report_reciept.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen_list_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>madeen_list_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen_print_2.resx">
+      <DependentUpon>madeen_print_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mas7obat_fatora.resx">
+      <DependentUpon>mas7obat_fatora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mas7obat_fatora_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mas7obat_fatora_report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mas7obat_list.resx">
+      <DependentUpon>mas7obat_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mo3adalat_form.resx">
+      <DependentUpon>mo3adalat_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mo3adalat_show.resx">
+      <DependentUpon>mo3adalat_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_detailed_report_grouped.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sales_detailed_report_grouped.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2_small.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2_small.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daily_gard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>daily_gard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_some_tables.resx">
+      <DependentUpon>delete_some_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="halek_show.resx">
+      <DependentUpon>halek_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="half_ezn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>half_ezn.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="half_fatora.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>half_fatora.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outcome_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>outcome_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outcome_report_form.resx">
+      <DependentUpon>outcome_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_crystal_taklefa_bee3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>products_crystal_taklefa_bee3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_crystal_for_all_without_zero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>products_crystal_for_all_without_zero.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_all_products_crystal.resx">
+      <DependentUpon>print_all_products_crystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_crystal_for_all_including_zero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>products_crystal_for_all_including_zero.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleted_form.resx">
+      <DependentUpon>deleted_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_category_price.resx">
+      <DependentUpon>edit_category_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mortaga3_purchases_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mortaga3_purchases_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mortaga3_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mortaga3_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="most7kat_da2neen_show.resx">
+      <DependentUpon>most7kat_da2neen_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="partners_share.resx">
+      <DependentUpon>partners_share.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_by_category_crystal.resx">
+      <DependentUpon>print_by_category_crystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pro_suggest_for_sell.resx">
+      <DependentUpon>pro_suggest_for_sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ra2s_elmal_status.resx">
+      <DependentUpon>ra2s_elmal_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sadad_print_reset.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sadad_print_reset.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kashf_7esab_report_a5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>kashf_7esab_report_a5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_report_crystal_grouped.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sales_report_crystal_grouped.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="select_printer_kashf_7esab.resx">
+      <DependentUpon>select_printer_kashf_7esab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kashf_7esab_report_reset.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>kashf_7esab_report_reset.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystal_nwa2es.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crystal_nwa2es.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\edit_attending.resx">
+      <DependentUpon>edit_attending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\ensraf_form.resx">
+      <DependentUpon>ensraf_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estlam_syana_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>estlam_syana_report.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n_print.resx">
+      <DependentUpon>da2n_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kashf_7esab_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>kashf_7esab_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mas7obat_syana.resx">
+      <DependentUpon>mas7obat_syana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mosta7kat_show.resx">
+      <DependentUpon>mosta7kat_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>products_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report14.rdlc" />
+    <EmbeddedResource Include="employees\add_solaf.resx">
+      <DependentUpon>add_solaf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\add_employee.resx">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_mwared.resx">
+      <DependentUpon>add_mwared.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_user_2.resx">
+      <DependentUpon>add_user_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arba7_report.resx">
+      <DependentUpon>arba7_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\attending_emp.resx">
+      <DependentUpon>attending_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\attending_show.resx">
+      <DependentUpon>attending_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="barcode_form.resx">
+      <DependentUpon>barcode_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart_form.resx">
+      <DependentUpon>chart_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="close_form.resx">
+      <DependentUpon>close_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contact_US.resx">
+      <DependentUpon>contact_US.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_all.resx">
+      <DependentUpon>delete_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employees\employees_show.resx">
+      <DependentUpon>employees_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ezn sarf\ezn_create.resx">
+      <DependentUpon>ezn_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ezn sarf\ezn_show.resx">
+      <DependentUpon>ezn_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ezn_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ezn_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="last_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>last_crystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal_report_last.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal_report_last.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of Copy of Report3.rdlc" />
+    <EmbeddedResource Include="Copy of CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of CrystalReport1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of Report3.rdlc" />
+    <EmbeddedResource Include="CrystalReport1_old.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1_old.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crystal_report_form.resx">
+      <DependentUpon>crystal_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_show.resx">
+      <DependentUpon>customers_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n\add_da2n.resx">
+      <DependentUpon>add_da2n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_madeen.resx">
+      <DependentUpon>add_madeen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buy.resx">
+      <DependentUpon>buy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n\da2n.resx">
+      <DependentUpon>da2n.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n\da2n_details.resx">
+      <DependentUpon>da2n_details.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n_details_print.resx">
+      <DependentUpon>da2n_details_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n_edit.resx">
+      <DependentUpon>da2n_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_user.resx">
+      <DependentUpon>delete_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_customer.resx">
+      <DependentUpon>edit_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_madeen_details.resx">
+      <DependentUpon>edit_madeen_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expiration_form.resx">
+      <DependentUpon>expiration_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gor3at.resx">
+      <DependentUpon>gor3at.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="income_print.resx">
+      <DependentUpon>income_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen\madeen.resx">
+      <DependentUpon>madeen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen\madeen_details.resx">
+      <DependentUpon>madeen_details.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="da2n\pay_da2n.resx">
+      <DependentUpon>pay_da2n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen\pay_madeen.resx">
+      <DependentUpon>pay_madeen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen_details_print.resx">
+      <DependentUpon>madeen_details_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="madeen_print.resx">
+      <DependentUpon>madeen_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mortaga3_purchases_reports.resx">
+      <DependentUpon>mortaga3_purchases_reports.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mortaga3_sales.resx">
+      <DependentUpon>mortaga3_sales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mwardeen_show.resx">
+      <DependentUpon>mwardeen_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nwa2es_print.resx">
+      <DependentUpon>nwa2es_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outcome_print.resx">
+      <DependentUpon>outcome_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pharmacy_data.resx">
+      <DependentUpon>pharmacy_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_fatora_bee3.resx">
+      <DependentUpon>print_fatora_bee3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_last_fatora.resx">
+      <DependentUpon>print_last_fatora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_print.resx">
+      <DependentUpon>products_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchases.resx">
+      <DependentUpon>purchases.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchases_fatora.resx">
+      <DependentUpon>purchases_fatora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchases_mortaga3.resx">
+      <DependentUpon>purchases_mortaga3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchases_print.resx">
+      <DependentUpon>purchases_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report13.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="safe\add_to_income.resx">
+      <DependentUpon>add_to_income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="arba7.resx">
+      <DependentUpon>arba7.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="safe\income.resx">
+      <DependentUpon>income.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="safe\outcome.resx">
+      <DependentUpon>outcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_barcode.resx">
+      <DependentUpon>print_barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\add_category.resx">
+      <DependentUpon>add_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\add_product.resx">
+      <DependentUpon>add_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\category_list.resx">
+      <DependentUpon>category_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\edit_category.resx">
+      <DependentUpon>edit_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\edit_product.resx">
+      <DependentUpon>edit_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\nwa2s.resx">
+      <DependentUpon>nwa2s.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products\product_list.resx">
+      <DependentUpon>product_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_moves.resx">
+      <DependentUpon>products_moves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="safe\safe_status.resx">
+      <DependentUpon>safe_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="safe\sarf_from_outcome.resx">
+      <DependentUpon>sarf_from_outcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="safe\sales.resx">
+      <DependentUpon>sales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales\sales_fatora.resx">
+      <DependentUpon>sales_fatora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_mortaga3.resx">
+      <DependentUpon>sales_mortaga3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales\sell.resx">
+      <DependentUpon>sell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales_print.resx">
+      <DependentUpon>sales_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saydaly_nesba.resx">
+      <DependentUpon>saydaly_nesba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="se3r_offer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>se3r_offer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_in_far3.resx">
+      <DependentUpon>search_in_far3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="select_printer.resx">
+      <DependentUpon>select_printer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales\sell_with_icons.resx">
+      <DependentUpon>sell_with_icons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serials_form.resx">
+      <DependentUpon>serials_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_picture_form.resx">
+      <DependentUpon>show_picture_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_users.resx">
+      <DependentUpon>show_users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stocks.resx">
+      <DependentUpon>stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstringAutoCompleteTextBox.resx">
+      <DependentUpon>SubstringAutoCompleteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syana\syana_fatora.resx">
+      <DependentUpon>syana_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syana\syana_reports.resx">
+      <DependentUpon>syana_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syana\syana_tanfeez.resx">
+      <DependentUpon>syana_tanfeez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ta2feel.resx">
+      <DependentUpon>ta2feel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ta2feel_arba7.resx">
+      <DependentUpon>ta2feel_arba7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ta2feel_crystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ta2feel_crystal1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ta7weel.resx">
+      <DependentUpon>ta7weel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ta7weelat_show.resx">
+      <DependentUpon>ta7weelat_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="syana\tasleem_syana.resx">
+      <DependentUpon>tasleem_syana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tawreedat_fatora.resx">
+      <DependentUpon>tawreedat_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tawreedat_list.resx">
+      <DependentUpon>tawreedat_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tawreedat_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>tawreedat_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wardia_CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>wardia_CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="pharma_manage_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="logo copy.ico" />
+    <Content Include="logo-hegazy.ico" />
+    <Content Include="modern_flat_mobile_icon_vector_3231955_dQt_icon.ico" />
+    <Content Include="my_data.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="my_data_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>my_data.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\powerbtn.bmp" />
+    <None Include="Resources\apm_logo.png" />
+    <None Include="Resources\blank_white.jpg" />
+    <None Include="Resources\sales_stable.gif" />
+    <None Include="Resources\sales_gif.gif" />
+    <None Include="Resources\sell_stable.png" />
+    <None Include="Resources\sell_gif.gif" />
+    <None Include="Resources\sell_stable.gif" />
+    <None Include="Resources\sales_stable.png" />
+    <None Include="Resources\sell stable1.png" />
+    <None Include="Resources\sell_gif1.gif" />
+    <None Include="Resources\sell stable.png" />
+    <None Include="Resources\stable.gif" />
+    <None Include="Resources\3dgifmaker74584.gif" />
+    <None Include="Resources\3dgifmaker54901.gif" />
+    <None Include="Resources\apm home pic.png" />
+    <None Include="Resources\apm_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EMFGENLib">
+      <Guid>{C097B4CF-2CEA-442F-B025-610D2B0C05C8}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAXSERIALIZELib">
+      <Guid>{6EF0D172-0FAB-4FC3-BDBB-C6C0D9D69A10}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VLELib">
+      <Guid>{ACF55B94-B31C-4604-912A-314B00C1595D}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

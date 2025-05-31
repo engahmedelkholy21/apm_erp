@@ -1,0 +1,20 @@
+# Build output folders
+bin/
+obj/
+
+# User-specific Visual Studio settings
+*.user
+*.suo
+
+# Debug and cache files
+*.pdb
+*.log
+*.tmp
+*.cache
+
+# VS2015+ folder (harmless in VS2010, useful for future)
+.vs/
+
+# Compiled binaries
+*.exe
+*.dll
