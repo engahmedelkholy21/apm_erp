@@ -515,7 +515,7 @@
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(243, 27);
+            this.label24.Location = new System.Drawing.Point(104, 27);
             this.label24.Name = "label24";
             this.label24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label24.Size = new System.Drawing.Size(97, 14);
@@ -526,7 +526,7 @@
             // 
             this.bee3_gomla_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bee3_gomla_txt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bee3_gomla_txt.Location = new System.Drawing.Point(158, 24);
+            this.bee3_gomla_txt.Location = new System.Drawing.Point(19, 24);
             this.bee3_gomla_txt.Name = "bee3_gomla_txt";
             this.bee3_gomla_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bee3_gomla_txt.Size = new System.Drawing.Size(77, 22);
@@ -561,7 +561,7 @@
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(462, 27);
+            this.label22.Location = new System.Drawing.Point(307, 27);
             this.label22.Name = "label22";
             this.label22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label22.Size = new System.Drawing.Size(63, 14);
@@ -572,7 +572,7 @@
             // 
             this.bee3_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bee3_txt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bee3_txt.Location = new System.Drawing.Point(381, 23);
+            this.bee3_txt.Location = new System.Drawing.Point(226, 23);
             this.bee3_txt.Name = "bee3_txt";
             this.bee3_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.bee3_txt.Size = new System.Drawing.Size(77, 22);
@@ -652,7 +652,7 @@
             // unit_price_txt
             // 
             this.unit_price_txt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit_price_txt.Location = new System.Drawing.Point(557, 23);
+            this.unit_price_txt.Location = new System.Drawing.Point(388, 23);
             this.unit_price_txt.Name = "unit_price_txt";
             this.unit_price_txt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.unit_price_txt.Size = new System.Drawing.Size(83, 22);
@@ -664,7 +664,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(643, 27);
+            this.label15.Location = new System.Drawing.Point(474, 27);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label15.Size = new System.Drawing.Size(74, 14);
@@ -674,7 +674,7 @@
             // countTXT
             // 
             this.countTXT.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countTXT.Location = new System.Drawing.Point(734, 23);
+            this.countTXT.Location = new System.Drawing.Point(560, 23);
             this.countTXT.Name = "countTXT";
             this.countTXT.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.countTXT.Size = new System.Drawing.Size(79, 22);
@@ -687,7 +687,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(816, 27);
+            this.label10.Location = new System.Drawing.Point(642, 27);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(43, 14);
@@ -695,13 +695,14 @@
             this.label10.Text = "الكميه";
             // 
             // product_nameTXT
-            //
+            // 
             this.product_nameTXT.AcceptButton = null;
             this.product_nameTXT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.product_nameTXT.BackColor = System.Drawing.Color.Silver;
-            this.product_nameTXT.Location = new System.Drawing.Point(870, 23);
+            this.product_nameTXT.Location = new System.Drawing.Point(691, 23);
             this.product_nameTXT.Name = "product_nameTXT";
-            this.product_nameTXT.Size = new System.Drawing.Size(230, 22);
+            this.product_nameTXT.next_textbox = null;
+            this.product_nameTXT.Size = new System.Drawing.Size(409, 22);
             this.product_nameTXT.TabIndex = 0;
             // 
             // label11
