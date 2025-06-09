@@ -2995,21 +2995,8 @@ namespace pharma_manage
         string ph_name;
         private void timer_backup_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (!backgroundWorker_backup.IsBusy)
-                {
-                    backgroundWorker_backup.RunWorkerAsync();
-                }
-            }
-            catch { }
-
-        }
-
-        private void backgroundWorker_backup_DoWork(object sender, DoWorkEventArgs e)
-        {
             get_partition();
-
+            
             ras_mal_method();
 
             string un = "";
@@ -3125,7 +3112,7 @@ namespace pharma_manage
                      System.IO.File.Delete(path.ToString());
                  }
 
-
+                
                 // MessageBox.Show("تم انشاء نسخه احتياطية لقاعدة البيانات  بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
