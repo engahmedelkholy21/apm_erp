@@ -26,6 +26,13 @@ namespace pharma_manage
             discount_txt.KeyPress += DigitOnly_KeyPress;
             countTXT.KeyPress += DigitOnly_KeyPress;
             madfoo3TXT.KeyPress += DigitOnly_KeyPress;
+
+            product_nameTXT.TextBox_.TextChanged += product_nameTXT_TextChanged;
+            product_nameTXT.TextBox_.KeyDown += product_nameTXT_KeyDown;
+            product_nameTXT.Listbox_.KeyDown += product_nameTXT_KeyDown;
+            product_nameTXT.AttachListBoxToParent(this);
+            product_nameTXT.AcceptButton = addbtn;
+            product_nameTXT.next_textbox = countTXT;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -95,7 +102,7 @@ namespace pharma_manage
             this.AcceptButton = null;
             try
             {
-                products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.Text);
+                products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.TextBox_.Text);
                 if (dataSet11.products_table.Rows.Count > 0)
                 {
                     unit_price_txt.Text = dataSet11.products_table[0]["pro_cost_price"].ToString();
@@ -113,7 +120,7 @@ namespace pharma_manage
                     unit_price_txt.Text = "";
                     bee3_txt.Text ="";
                     int_code_txt.Text = "";
-                   // product_nameTXT.Text = "";
+                   // product_nameTXT.TextBox_.Text = "";
                     category_txt.Text ="";
                     pro_limit_txt.Text = "0";
                         old_int_code="";
@@ -159,13 +166,13 @@ namespace pharma_manage
                 }
                 for (int i = 0; i < dataGridView1.Rows.Count; ++i)
                 {
-                    if (dataGridView1.Rows[i].Cells[2].Value.ToString() == product_nameTXT.Text)
+                    if (dataGridView1.Rows[i].Cells[2].Value.ToString() == product_nameTXT.TextBox_.Text)
                     {
                         dataGridView1.Rows[i].Cells[3].Value = Convert.ToDecimal(dataGridView1.Rows[i].Cells[3].Value) + Convert.ToDecimal(countTXT.Text);
                       //  MessageBox.Show("المنتج موجود بالفعل");
-                        product_nameTXT.Clear(); countTXT.Clear(); unit_price_txt.Clear(); bee3_gomla_txt.Clear();
-                        product_nameTXT.Focus(); int_code_txt.Clear();
-                        product_nameTXT.Select();
+                        product_nameTXT.TextBox_.Clear(); countTXT.Clear(); unit_price_txt.Clear(); bee3_gomla_txt.Clear();
+                        product_nameTXT.TextBox_.Focus(); int_code_txt.Clear();
+                        product_nameTXT.TextBox_.Select();
                         return;
                     }
 
@@ -191,11 +198,11 @@ namespace pharma_manage
                     {
                         products_tableTableAdapter1.Update_int_code_by_id(int_code_txt.Text, id_for_updating_int_code);
 
-                        sales_tableTableAdapter1.Update_pro_id_by_old_id(int_code_txt.Text, product_nameTXT.Text, old_int_code, stock_txt.Text);
-                        ma5zoon_movesTableAdapter1.Update_pro_code(int_code_txt.Text, product_nameTXT.Text, old_int_code);
-                        purchases_tableTableAdapter1.Update_pro_id(int_code_txt.Text, product_nameTXT.Text, old_int_code, stock_txt.Text);
+                        sales_tableTableAdapter1.Update_pro_id_by_old_id(int_code_txt.Text, product_nameTXT.TextBox_.Text, old_int_code, stock_txt.Text);
+                        ma5zoon_movesTableAdapter1.Update_pro_code(int_code_txt.Text, product_nameTXT.TextBox_.Text, old_int_code);
+                        purchases_tableTableAdapter1.Update_pro_id(int_code_txt.Text, product_nameTXT.TextBox_.Text, old_int_code, stock_txt.Text);
                         // mortaga3_purchasesTableAdapter1.Update_pro_id(Convert.ToInt32(int_code_txt.Text), name_txt.Text, Convert.ToInt32(old_int_code));
-                        sales_mortaga3TableAdapter1.Update_pro_id(int_code_txt.Text, product_nameTXT.Text, old_int_code);
+                        sales_mortaga3TableAdapter1.Update_pro_id(int_code_txt.Text, product_nameTXT.TextBox_.Text, old_int_code);
                
                     }
                     else
@@ -207,7 +214,7 @@ namespace pharma_manage
                 if (int_code_txt.Text != "")
                 {
                     products_tableTableAdapter1.FillBy_int_code_and_far3(dataSet11.products_table, int_code_txt.Text, stock_txt.Text);
-                    if (dataSet11.products_table.Rows.Count>0 &&product_nameTXT.Text != dataSet11.products_table.Rows[0]["pro_name"].ToString())
+                    if (dataSet11.products_table.Rows.Count>0 &&product_nameTXT.TextBox_.Text != dataSet11.products_table.Rows[0]["pro_name"].ToString())
                     {
                         MessageBox.Show("هذا الكود موجود مسبقا لصنف " + dataSet11.products_table.Rows[0]["pro_name"].ToString() + " برجاء المراجعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -217,7 +224,7 @@ namespace pharma_manage
                 try
                 {
                     products_tableTableAdapter1.Update_int_code_if_null();
-                    products_tableTableAdapter1.FillBy_name_and_far3(dataSet11.products_table, product_nameTXT.Text, stock_txt.Text);
+                    products_tableTableAdapter1.FillBy_name_and_far3(dataSet11.products_table, product_nameTXT.TextBox_.Text, stock_txt.Text);
                     if (dataSet11.products_table.Rows.Count <= 0)
                     {
                         products_tableTableAdapter1.FillBy_int_code_and_far3(dataSet11.products_table, int_code_txt.Text, stock_txt.Text);
@@ -256,8 +263,8 @@ namespace pharma_manage
                             }
                         }
                         dataGridView1.Rows.Add((dataGridView1.Rows.Count + 1).ToString(), pro_code, product_name, countTXT.Text, unit_price_txt.Text, "", true, countTXT.Text);
-                        product_nameTXT.Clear(); countTXT.Clear(); unit_price_txt.Clear(); int_code_txt.Clear();
-                        product_nameTXT.Focus();
+                        product_nameTXT.TextBox_.Clear(); countTXT.Clear(); unit_price_txt.Clear(); int_code_txt.Clear();
+                        product_nameTXT.TextBox_.Focus();
 
                         if (dataGridView1.Columns.Count == 8)
                         {
@@ -265,7 +272,7 @@ namespace pharma_manage
 
                             btn.Width = 75;
                             btn.Text = "حذف";
-                            btn.Name = product_nameTXT.Text;
+                            btn.Name = product_nameTXT.TextBox_.Text;
                             btn.UseColumnTextForButtonValue = true;
 
 
@@ -290,7 +297,7 @@ namespace pharma_manage
                         {
                             try
                             {
-                                products_tableTableAdapter1.Insert_product(product_nameTXT.Text, category_txt.Text, Convert.ToDecimal(unit_price_txt.Text), Convert.ToDecimal(bee3_txt.Text), Convert.ToDecimal(0), Convert.ToDecimal(pro_limit_txt.Text), dateTimePicker1.Value.ToShortDateString(),
+                                products_tableTableAdapter1.Insert_product(product_nameTXT.TextBox_.Text, category_txt.Text, Convert.ToDecimal(unit_price_txt.Text), Convert.ToDecimal(bee3_txt.Text), Convert.ToDecimal(0), Convert.ToDecimal(pro_limit_txt.Text), dateTimePicker1.Value.ToShortDateString(),
                                  "", "", cst_nameTXT.Text, cst_phoneTXT.Text, usertxt.Text, Convert.ToDecimal(0), stock_txt.Text, Convert.ToDecimal(1), Convert.ToDecimal(0), Convert.ToDecimal(bee3_gomla_txt.Text) * Convert.ToDecimal(1), Convert.ToDecimal(bee3_gomla_txt.Text), "", "تم الجرد",dateTimePicker1.Value.ToShortDateString());
 
                                 products_tableTableAdapter1.Update_int_code_if_null();
@@ -299,14 +306,14 @@ namespace pharma_manage
                             {
                                 products_tableTableAdapter1.Update_int_code_if_null();
                             }
-                            //products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.Text);
+                            //products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.TextBox_.Text);
                             //int intcode = Convert.ToInt32(dataSet11.products_table.Rows[0]["pro_ID"].ToString());
                             //products_tableTableAdapter1.Update_int_code_by_id(intcode.ToString(), intcode);
                         }
                         else
                         {
                             products_tableTableAdapter1.FillBy_int_code_and_far3(dataSet11.products_table, int_code_txt.Text, stock_txt.Text);
-                            if (dataSet11.products_table.Rows.Count > 0 && dataSet11.products_table.Rows[0]["pro_name"].ToString() != product_nameTXT.Text)
+                            if (dataSet11.products_table.Rows.Count > 0 && dataSet11.products_table.Rows[0]["pro_name"].ToString() != product_nameTXT.TextBox_.Text)
                             {
 
                                 MessageBox.Show("الكود موجود مسبقا لصنف اخر باسم" + dataSet11.products_table.Rows[0]["pro_name"].ToString(), "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -314,19 +321,19 @@ namespace pharma_manage
 
                             }
 
-                            products_tableTableAdapter1.Insert_product(product_nameTXT.Text, category_txt.Text, Convert.ToDecimal(unit_price_txt.Text), Convert.ToDecimal(bee3_txt.Text), Convert.ToDecimal(0), Convert.ToDecimal(pro_limit_txt.Text), dateTimePicker1.Value.ToShortDateString(),
+                            products_tableTableAdapter1.Insert_product(product_nameTXT.TextBox_.Text, category_txt.Text, Convert.ToDecimal(unit_price_txt.Text), Convert.ToDecimal(bee3_txt.Text), Convert.ToDecimal(0), Convert.ToDecimal(pro_limit_txt.Text), dateTimePicker1.Value.ToShortDateString(),
                                "", "", cst_nameTXT.Text, cst_phoneTXT.Text, usertxt.Text, Convert.ToDecimal(0), stock_txt.Text, Convert.ToDecimal(1), Convert.ToDecimal(0), Convert.ToDecimal(bee3_gomla_txt.Text) * Convert.ToDecimal(1), Convert.ToDecimal(bee3_gomla_txt.Text), int_code_txt.Text, "تم الجرد", dateTimePicker1.Value.ToShortDateString());
                             products_tableTableAdapter1.Update_int_code_if_null();
 
                         }
                         products_tableTableAdapter1.Update_int_code_if_null();
-                        products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.Text);
+                        products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.TextBox_.Text);
                         string pro_code = dataSet11.products_table.Rows[0]["pro_int_code"].ToString();
                         string product_name = dataSet11.products_table.Rows[0]["pro_name"].ToString();
 
                         dataGridView1.Rows.Add((dataGridView1.Rows.Count + 1).ToString(), pro_code, product_name, countTXT.Text, unit_price_txt.Text, "", true, countTXT.Text);
-                        product_nameTXT.Clear(); countTXT.Clear(); unit_price_txt.Clear();
-                        product_nameTXT.Focus(); int_code_txt.Clear(); bee3_gomla_txt.Clear();
+                        product_nameTXT.TextBox_.Clear(); countTXT.Clear(); unit_price_txt.Clear();
+                        product_nameTXT.TextBox_.Focus(); int_code_txt.Clear(); bee3_gomla_txt.Clear();
 
                         if (dataGridView1.Columns.Count == 8)
                         {
@@ -334,7 +341,7 @@ namespace pharma_manage
 
                             btn.Width = 75;
                             btn.Text = "حذف";
-                            btn.Name = product_nameTXT.Text;
+                            btn.Name = product_nameTXT.TextBox_.Text;
                             btn.UseColumnTextForButtonValue = true;
 
 
@@ -919,15 +926,7 @@ namespace pharma_manage
         private void suggest_product()
         {
             this.products_tableTableAdapter1.Fill(this.dataSet11.products_table);
-            product_nameTXT.AutoCompleteMode = AutoCompleteMode.Suggest;
-            product_nameTXT.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
-            foreach (DataRow dr in dataSet11.products_table.Rows)
-            {
-                DataCollection.Add(dr["pro_name"].ToString());
-            }
-
-            product_nameTXT.AutoCompleteCustomSource = DataCollection;
+            product_nameTXT.SetSuggestions(dataSet11.products_table, "pro_name");
 
         }
         private void suggest_mwared_name()
@@ -983,7 +982,7 @@ namespace pharma_manage
 
                     btn.Width = 75;
                     btn.Text = "حذف";
-                    btn.Name = product_nameTXT.Text;
+                    btn.Name = product_nameTXT.TextBox_.Text;
                     btn.UseColumnTextForButtonValue = true;
 
 
@@ -1012,7 +1011,7 @@ namespace pharma_manage
         {
             try
             {
-                products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.Text);
+                products_tableTableAdapter1.FillBy_name(dataSet11.products_table, product_nameTXT.TextBox_.Text);
                 unit_price_txt.Text = dataSet11.products_table[0]["pro_cost_price"].ToString();
                 bee3_txt.Text = dataSet11.products_table.Rows[0]["pro_bee3"].ToString();
                 pro_limit_txt.Text = dataSet11.products_table[0]["pro_limit"].ToString();
@@ -1061,7 +1060,7 @@ namespace pharma_manage
             //    gomla_gomla_txt.Text = dataSet11.products_table.Rows[0]["pro_gomla_gomla"].ToString();
             //    //bee3_txt.Text = dataSet11.products_table[0]["pro_bee3"].ToString();
             //    //gmhour_txt.Text = (Convert.ToDecimal(dataSet11.products_table[0]["pro_bee3_2"]) / Convert.ToDecimal(dataSet11.products_table[0]["pro_pieces_in_packet"])).ToString();
-            //    product_nameTXT.Text = dataSet11.products_table[0]["pro_name"].ToString();
+            //    product_nameTXT.TextBox_.Text = dataSet11.products_table[0]["pro_name"].ToString();
             //    //pieces_in_packet_txt.Text = dataSet11.products_table[0]["pro_pieces_in_packet"].ToString();
             //}
             //catch
@@ -1115,11 +1114,11 @@ namespace pharma_manage
                 {
                     this.AcceptButton = null;
 
-                    products_tableTableAdapter1.FillBy_pro_int_code(dataSet11.products_table, product_nameTXT.Text);
+                    products_tableTableAdapter1.FillBy_pro_int_code(dataSet11.products_table, product_nameTXT.TextBox_.Text);
                     unit_price_txt.Text = dataSet11.products_table[0]["pro_cost_price"].ToString();
                     bee3_txt.Text = dataSet11.products_table.Rows[0]["pro_bee3"].ToString();
                     int_code_txt.Text = dataSet11.products_table[0]["pro_int_code"].ToString();
-                    product_nameTXT.Text = dataSet11.products_table[0]["pro_name"].ToString();
+                    product_nameTXT.TextBox_.Text = dataSet11.products_table[0]["pro_name"].ToString();
                     category_txt.Text = dataSet11.products_table[0]["pro_category"].ToString();
                     pro_limit_txt.Text = dataSet11.products_table[0]["pro_limit"].ToString();
                     bee3_gomla_txt.Text = dataSet11.products_table[0]["pro_bee3_2"].ToString();
@@ -1135,7 +1134,7 @@ namespace pharma_manage
           //  this.AcceptButton = addbtn;
             try
             {
-                if (product_nameTXT.Focused == false)
+                if (product_nameTXT.TextBox_.Focused == false)
                 {
                     if (nesba_txt.Text != "")
                     {
@@ -1255,9 +1254,9 @@ namespace pharma_manage
                 this.AcceptButton = null;
 
                 products_tableTableAdapter1.FillBy_pro_int_code(dataSet11.products_table, int_code_txt.Text);
-                if (product_nameTXT.Text != "") 
+                if (product_nameTXT.TextBox_.Text != "") 
                 {
-                    if (dataSet11.products_table.Rows[0]["pro_name"].ToString() != product_nameTXT.Text) 
+                    if (dataSet11.products_table.Rows[0]["pro_name"].ToString() != product_nameTXT.TextBox_.Text) 
                     {
                         MessageBox.Show("هذا الكود موجود لصنف اخر  باسم " + dataSet11.products_table.Rows[0]["pro_name"].ToString(), "خطأ",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         return;
@@ -1270,7 +1269,7 @@ namespace pharma_manage
         {
             try
             {
-                if (product_nameTXT.Focused == false)
+                if (product_nameTXT.TextBox_.Focused == false)
                 {
                     if (nesba_txt.Text != "")
                     {

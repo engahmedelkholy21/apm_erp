@@ -3053,6 +3053,19 @@ namespace pharma_manage
 
         private void backgroundWorker_backup_DoWork(object sender, DoWorkEventArgs e)
         {
+            try
+            {
+                if (!backgroundWorker_backup.IsBusy)
+                {
+                    backgroundWorker_backup.RunWorkerAsync();
+                }
+            }
+            catch { }
+
+        }
+
+        private void backgroundWorker_backup_DoWork(object sender, DoWorkEventArgs e)
+        {
             get_partition();
 
             ras_mal_method();

@@ -78,7 +78,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.countTXT = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.product_nameTXT = new System.Windows.Forms.TextBox();
+            this.product_nameTXT = new pharma_manage.SubstringAutoCompleteTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11 = new pharma_manage.DataSet1();
@@ -695,15 +695,14 @@
             this.label10.Text = "الكميه";
             // 
             // product_nameTXT
-            // 
-            this.product_nameTXT.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //
+            this.product_nameTXT.AcceptButton = null;
+            this.product_nameTXT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.product_nameTXT.BackColor = System.Drawing.Color.Silver;
             this.product_nameTXT.Location = new System.Drawing.Point(870, 23);
             this.product_nameTXT.Name = "product_nameTXT";
-            this.product_nameTXT.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.product_nameTXT.Size = new System.Drawing.Size(230, 22);
             this.product_nameTXT.TabIndex = 0;
-            this.product_nameTXT.TextChanged += new System.EventHandler(this.product_nameTXT_TextChanged);
-            this.product_nameTXT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.product_nameTXT_KeyDown);
             // 
             // label11
             // 
@@ -1160,7 +1159,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox countTXT;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox product_nameTXT;
+        private pharma_manage.SubstringAutoCompleteTextBox product_nameTXT;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label usertxt;
         private System.Windows.Forms.Label label3;
