@@ -28,6 +28,7 @@ using System.Reflection;
 
 
 using System.Threading;
+using System.Threading.Tasks;
 using Google.Apis.Upload;
 using Google.Apis.Util.Store;
 
@@ -68,26 +69,28 @@ namespace pharma_manage
                 }
             }
 
-            private void CheckAndRestartSqlService()
+        private void CheckAndRestartSqlService()
+        {
+            Task.Run(() =>
             {
                 try
                 {
-                    // Check if the SQL Server service is stopped
                     if (sqlServiceController.Status == ServiceControllerStatus.Stopped)
                     {
-                        // Start the SQL Server service
                         sqlServiceController.Start();
                         sqlServiceController.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(10));
-                
-                        MessageBox.Show("SQL Server service has been restarted.");
+
+                        this.Invoke(new Action(() =>
+                            MessageBox.Show("SQL Server service has been restarted.")));
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error restarting SQL Server service: "+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    // Handle the exception as needed
+                    this.Invoke(new Action(() =>
+                        MessageBox.Show("Error restarting SQL Server service: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)));
                 }
-            }
+            });
+        }
        
 
         private void ادخالفئةجديدهToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2993,10 +2996,11 @@ namespace pharma_manage
         }
 
         string ph_name;
-        private void timer_backup_Tick(object sender, EventArgs e)
+
+        private void PerformBackup()
         {
             get_partition();
-            
+
             ras_mal_method();
 
             string un = "";
@@ -3120,6 +3124,12 @@ namespace pharma_manage
                 //    MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private async void timer_backup_Tick(object sender, EventArgs e)
+        {
+            await Task.Run(() => PerformBackup());
+            MessageBox.Show("Backup completed.");
         }
 
         private void button21_Click(object sender, EventArgs e)
