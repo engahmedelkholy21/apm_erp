@@ -1406,16 +1406,14 @@ namespace pharma_manage
 
                 // MessageBox.Show(backupname);
                 // return;
-                SqlCommand cmd = new SqlCommand();
-
-                //string db_name = "[" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\my_data.mdf " + "]";
                 FileInfo path = new FileInfo(backupname);
-                //    string query = "backup Database" + db_name + "To Disk=" + sf.FileName;
-                cmd = new SqlCommand("backup Database " + db_name + " To Disk='" + backupname + "'", c);
-                // MessageBox.Show("backup Database " + db_name + " To Disk='" + backupname + "'");
-                c.Open();
-                cmd.ExecuteNonQuery();
-                c.Close();
+
+                using (SqlConnection c = new SqlConnection(connString))
+                using (SqlCommand cmd = new SqlCommand("backup Database " + db_name + " To Disk='" + backupname + "'", c))
+                {
+                    c.Open();
+                    cmd.ExecuteNonQuery();
+                }
 
                  Compress(path);
                  if (System.IO.File.Exists(path.ToString()))
@@ -1866,25 +1864,19 @@ namespace pharma_manage
 
         private void button14_Click(object sender, EventArgs e)
         {
-
-            
                          ListBox list = new ListBox();
-                         SqlConnection c = new SqlConnection();
-                         c.ConnectionString = @"Data Source=.\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=my_data;Integrated Security=false;User ID=me;Password=ahmed2010";
-                         SqlCommand cmd = new SqlCommand();
-
-
-
-
-
+                         string connString = @"Data Source=.\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=my_data;Integrated Security=false;User ID=me;Password=ahmed2010";
+                         using (SqlConnection c = new SqlConnection(connString))
                          c.Open();
-                         SqlCommand com = new SqlCommand("SELECT   TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_CATALOG='my_data'", c);
-                         DataTable t = c.GetSchema("Tables");
-                         SqlDataAdapter adapter = new SqlDataAdapter(com);
-                         adapter.Fill(t);
-                         foreach (DataRow dr in t.Rows)
+                         using (SqlCommand com = new SqlCommand("SELECT   TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_CATALOG='my_data'", c))
                          {
-                             list.Items.Add(dr[2].ToString());
+                             DataTable t = c.GetSchema("Tables");
+                             SqlDataAdapter adapter = new SqlDataAdapter(com);
+                             adapter.Fill(t);
+                             foreach (DataRow dr in t.Rows)
+                             {
+                                 list.Items.Add(dr[2].ToString());
+                             }
                          }
 
 
@@ -1892,14 +1884,14 @@ namespace pharma_manage
                          // MessageBox.Show(path);
                          foreach (var item in list.Items)
                          {
-
                              string query = "TRUNCATE TABLE " + item.ToString();
-                             cmd = new SqlCommand(query, c);
-                             // c.Open();
-                             cmd.ExecuteNonQuery();
-
+                             using (SqlCommand cmd = new SqlCommand(query, c))
+                             {
+                                 cmd.ExecuteNonQuery();
+                             }
                          }
                          c.Close();
+                         }
                          MessageBox.Show("تم مسح جميع البيانات ستتم اعادة تشغيل النظام");
                          Application.Restart();
            // //products_tableTableAdapter1.Delete_delete_all();
@@ -3467,19 +3459,16 @@ namespace pharma_manage
                 SaveFileDialog sf = new SaveFileDialog();
                 sf.Filter = "Backup (*.Bak)|*.bak";
 
-                SqlConnection c = new SqlConnection();
+                string connString;
                 if (un == "")
                 {
-                    c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\my_data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
-
+                    connString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\my_data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
                     db_name = "[" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\my_data.mdf " + "]";
-
                 }
                 else
                 {
-                    c.ConnectionString = @"Data Source=" + ip + "\\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=my_data;Integrated Security=false;User ID=" + un + ";Password=" + pw;
+                    connString = @"Data Source=" + ip + "\\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=my_data;Integrated Security=false;User ID=" + un + ";Password=" + pw;
                     db_name = "my_data";
-
                 }
 
                 // MessageBox.Show(backup_partition);
@@ -3492,16 +3481,14 @@ namespace pharma_manage
 
                 // MessageBox.Show(backupname);
                 // return;
-                SqlCommand cmd = new SqlCommand();
-
-                //string db_name = "[" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\my_data.mdf " + "]";
                 FileInfo path = new FileInfo(backupname);
-                //    string query = "backup Database" + db_name + "To Disk=" + sf.FileName;
-                cmd = new SqlCommand("backup Database " + db_name + " To Disk='" + backupname + "'", c);
-                // MessageBox.Show("backup Database " + db_name + " To Disk='" + backupname + "'");
-                c.Open();
-                cmd.ExecuteNonQuery();
-                c.Close();
+
+                using (SqlConnection c = new SqlConnection(connString))
+                using (SqlCommand cmd = new SqlCommand("backup Database " + db_name + " To Disk='" + backupname + "'", c))
+                {
+                    c.Open();
+                    cmd.ExecuteNonQuery();
+                }
 
                 Compress(path);
                 //MessageBox.Show(path.ToString());
