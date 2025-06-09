@@ -200,6 +200,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer_for_deleting_temp = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker_delete_temp = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker_backup = new System.ComponentModel.BackgroundWorker();
             this.timer_backup = new System.Windows.Forms.Timer(this.components);
             this.button21 = new System.Windows.Forms.Button();
             this.timer_backup_to_mail = new System.Windows.Forms.Timer(this.components);
@@ -1685,7 +1686,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 2000;
+            this.timer2.Interval = 10000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer_for_deleting_temp
@@ -1703,9 +1704,13 @@
             this.timer_backup.Enabled = true;
             this.timer_backup.Interval = 3600000;
             this.timer_backup.Tick += new System.EventHandler(this.timer_backup_Tick);
-            // 
+            //
+            // backgroundWorker_backup
+            //
+            this.backgroundWorker_backup.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_backup_DoWork);
+            //
             // button21
-            // 
+            //
             resources.ApplyResources(this.button21, "button21");
             this.button21.Name = "button21";
             this.button21.UseVisualStyleBackColor = true;
@@ -2233,6 +2238,7 @@
         private System.Windows.Forms.ToolStripMenuItem إحصائياتالأقساطToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem طباعةالجردToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1_google_drive;
+        private System.ComponentModel.BackgroundWorker backgroundWorker_backup;
         private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
