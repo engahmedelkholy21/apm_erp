@@ -25,6 +25,8 @@ using Microsoft.Win32;
 using System.ServiceProcess;
 using System.Reflection;
 
+using System.Threading.Tasks;
+
 
 
 using System.Threading;
@@ -1166,6 +1168,53 @@ namespace pharma_manage
                 }
             }
             catch { }
+        }
+
+        private void RefreshCategoriesAsync()
+        {
+            Task.Factory.StartNew(() =>
+            {
+                try
+                {
+                    // Use a separate table to avoid cross-thread issues with the main dataset
+                    DataSet1.CategoryDataTable temp = new DataSet1.CategoryDataTable();
+                    categoryTableAdapter1.Fill(temp);
+
+                    var names = new List<string>();
+                    foreach (DataRow dr in temp.Rows)
+                    {
+                        if (dr["Category_name"].ToString() != "خامات")
+                        {
+                            names.Add(dr["Category_name"].ToString());
+                        }
+                    }
+
+                    Action update = () =>
+                    {
+                        // Update main dataset
+                        dataSet11.Category.Clear();
+                        dataSet11.Category.Merge(temp);
+
+                        category_list_items.Items.Clear();
+                        foreach (string n in names)
+                        {
+                            category_list_items.Items.Add(n);
+                        }
+                    };
+
+                    if (category_list_items.InvokeRequired)
+                    {
+                        category_list_items.BeginInvoke(update);
+                    }
+                    else
+                    {
+                        update();
+                    }
+                }
+                catch
+                {
+                }
+            });
         }
         public void ras_mal_method()
         {
@@ -2793,8 +2842,8 @@ namespace pharma_manage
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            refresh_categories();
-           
+            RefreshCategoriesAsync();
+
         }
 
         private void انشاءعرضسعرToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4149,7 +4198,7 @@ namespace pharma_manage
 
             ras_mal_method();
             this.ras_mal_productsTableAdapter1.Fill(dataSet11.ras_mal_products);
-            refresh_categories();
+            RefreshCategoriesAsync();
             //try
             //{
             stock_tableTableAdapter1.Fill(dataSet11.stock_table);
