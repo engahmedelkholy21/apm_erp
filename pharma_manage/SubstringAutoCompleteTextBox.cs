@@ -284,10 +284,25 @@ namespace pharma_manage
         /// </summary>
         private void textBox_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Tab)
+            {
+                // Move focus to the next configured control when Tab is pressed
+                if (next_textbox != null)
+                {
+                    e.SuppressKeyPress = true;
+                    next_textbox.Focus();
+                }
+                return;
+            }
+
             if (listBox.Visible)
             {
                 if (e.KeyCode == Keys.Down)
                 {
+                    // If suggestions are visible, ensure at least the first item is selected
+                    if (listBox.Items.Count > 0 && listBox.SelectedIndex < 0)
+                        listBox.SelectedIndex = 0;
+
                     // Set the flag to indicate arrow key navigation from the TextBox.
                     arrowDownInitiatedFocus = true;
                     listBox.Focus(); // move focus so that ListBox_KeyDown / Enter event can work
@@ -300,6 +315,20 @@ namespace pharma_manage
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                     listBox.Visible = false;
+                }
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                // If the user pressed Down before suggestions became visible,
+                // update suggestions immediately and move focus to the list
+                UpdateSuggestionsAsync();
+                arrowDownInitiatedFocus = true;
+                if (listBox.Items.Count > 0)
+                {
+                    listBox.SelectedIndex = 0;
+                    listBox.Focus();
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
                 }
             }
         }
@@ -326,6 +355,16 @@ namespace pharma_manage
                 e.Handled = true;
                 e.SuppressKeyPress = true;
                 this.BeginInvoke(new Action(SelectItem));
+            }
+            else if (e.KeyCode == Keys.Tab)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                SelectItem();
+                if (next_textbox != null)
+                {
+                    next_textbox.Focus();
+                }
             }
             else if (e.KeyCode == Keys.Escape)
             {
