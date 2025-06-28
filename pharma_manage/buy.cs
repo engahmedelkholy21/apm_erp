@@ -214,10 +214,15 @@ namespace pharma_manage
                 if (int_code_txt.Text != "")
                 {
                     products_tableTableAdapter1.FillBy_int_code_and_far3(dataSet11.products_table, int_code_txt.Text, stock_txt.Text);
-                    if (dataSet11.products_table.Rows.Count>0 &&product_nameTXT.TextBox_.Text != dataSet11.products_table.Rows[0]["pro_name"].ToString())
+                    if (dataSet11.products_table.Rows.Count > 0)
                     {
-                        MessageBox.Show("هذا الكود موجود مسبقا لصنف " + dataSet11.products_table.Rows[0]["pro_name"].ToString() + " برجاء المراجعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        string typedName = product_nameTXT.TextBox_.Text.Trim();
+                        string existingName = dataSet11.products_table.Rows[0]["pro_name"].ToString().Trim();
+                        if (!string.Equals(typedName, existingName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            MessageBox.Show("هذا الكود موجود مسبقا لصنف " + existingName + " برجاء المراجعة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                     }
                 }
 
@@ -1254,11 +1259,13 @@ namespace pharma_manage
                 this.AcceptButton = null;
 
                 products_tableTableAdapter1.FillBy_pro_int_code(dataSet11.products_table, int_code_txt.Text);
-                if (product_nameTXT.TextBox_.Text != "") 
+                if (product_nameTXT.TextBox_.Text != "")
                 {
-                    if (dataSet11.products_table.Rows[0]["pro_name"].ToString() != product_nameTXT.TextBox_.Text) 
+                    string typedName = product_nameTXT.TextBox_.Text.Trim();
+                    string existingName = dataSet11.products_table.Rows[0]["pro_name"].ToString().Trim();
+                    if (!string.Equals(existingName, typedName, StringComparison.OrdinalIgnoreCase))
                     {
-                        MessageBox.Show("هذا الكود موجود لصنف اخر  باسم " + dataSet11.products_table.Rows[0]["pro_name"].ToString(), "خطأ",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("هذا الكود موجود لصنف اخر  باسم " + existingName, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
